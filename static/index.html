@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WebSocket chat room</title>
+  </head>
+  <body>
+    <button id="connect">Connect</button>
+    <button id="send">Send message</button>
+    <script>
+      let ws = null;
+      const btnConnect = document.querySelector("#connect");
+      const btnSend = document.querySelector("#send");
+      btnConnect.onclick = function () {
+        ws = new WebSocket("ws://localhost:7000/chat");
+        ws.onopen = () => console.log("Connected");
+        ws.onclose = e => console.log("Closed", e);
+      };
+      btnSend.onclick = function () {
+        const message = JSON.stringify("hello");
+        if (ws) ws.send(message);
+      };
+    </script>
+  </body>
+</html>

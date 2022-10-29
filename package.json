@@ -5,5 +5,11 @@
   "main": "index.js",
   "repository": "https://github.com/reymons/ws-chat.git",
   "author": "Daniel",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "start": "node lib/index.js"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.7"
+  }
 }
