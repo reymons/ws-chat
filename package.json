@@ -1,0 +1,9 @@
+{
+  "name": "ws-chat",
+  "version": "1.0.0",
+  "description": "WebSocket chat room",
+  "main": "index.js",
+  "repository": "https://github.com/reymons/ws-chat.git",
+  "author": "Daniel",
+  "license": "MIT"
+}
